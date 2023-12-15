@@ -17,13 +17,13 @@ const ProfileHeader = () => {
         >
           <Text fontSize={{ base: "sm", md: "lg" }}>Lonecode</Text>
           <Flex gap={4} justifyContent={"center"} alignItems={"center"}>
-            <Button bg={"white"} color={"black"} _hover={"whiteAlpha.800"} size={{ base: "xs", md: "sm" }}>
+            <Button bg={"white"} color={"black"} _hover={{ bg: "whiteAlpha.800" }} size={{ base: "xs", md: "sm" }}>
               Update Profile
             </Button>
           </Flex>
         </Flex>
 
-        <Flex aligItems={"center"} gap={{ base: 2, md: 4 }}>
+        <Flex alignItems={"center"} gap={{ base: 2, md: 4 }}>
           <Text fontSize={{ base: "xs", md: "sm" }}>
             <Text as={"span"} fontWeight={"bold"} mr={1}>
               4
