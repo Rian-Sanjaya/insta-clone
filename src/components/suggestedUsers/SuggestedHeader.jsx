@@ -6,7 +6,7 @@ const SuggestedHeader = () => {
     <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"}>
       <Flex alignItems={"center"} gap={2}>
         <Avatar src="/profilepic.png" size={"lg"} name="As a programmer" />
-        <Text fontSize={12} fontWeight={"bold"}>asaprogrammer</Text>
+        <Text fontSize={12} fontWeight={"bold"}>Lonecode</Text>
       </Flex>
       <Link
         as={RouterLink}
