@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router"
-import HomePage from './views/homepage/HomePage'
-import AuthPage from './views/authPage/AuthPage'
-import LayoutPage from "./views/layoutPage/LayoutPage"
-import ProfilePage from "./views/profilePage/ProfilePage"
+import HomePage from './pages/homepage/HomePage'
+import AuthPage from './pages/authPage/AuthPage'
+import LayoutPage from "./pages/layoutPage/LayoutPage"
+import ProfilePage from "./pages/profilePage/ProfilePage"
 
 function App() {
   return (

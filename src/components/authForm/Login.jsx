@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { Input, Button } from "@chakra-ui/react"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
+  const navigate = useNavigate()
+  
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -25,7 +28,7 @@ const Login = () => {
         onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
       />
 
-      <Button w={"full"} colorScheme="blue" size={"sm"} fontSize={14}>
+      <Button w={"full"} colorScheme="blue" size={"sm"} fontSize={14} onClick={() => navigate("/")}>
         Log in
       </Button>
     </>
