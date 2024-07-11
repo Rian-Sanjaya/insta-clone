@@ -50,7 +50,7 @@ const ProfileHeader = () => {
 
         <Flex alignItems={"center"} gap={4}>
           <Text fontWeight={"bold"} fontSize={"sm"}>
-            Tutorial that are meant to level up your skills as a programmer
+            A Project that are meant to level up my skills as a programmer
           </Text>
         </Flex>
       </VStack>

@@ -21,7 +21,7 @@ const SuggestedUsers = () => {
       <SuggestedUser name="Christian Nwamba" follower={759} avatar="https://bit.ly/code-beast" />
 
       <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
-        @ 2023 Build By{" "}
+        @ 2024 Build By{" "}
         <Link href="https://rian-sanjaya.github.io/" target="_blank" color={"blue.500"} fontSize={14}>Lonecode</Link>
       </Box>
     </VStack>

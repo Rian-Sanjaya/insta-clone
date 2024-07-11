@@ -28,7 +28,14 @@ const Login = () => {
         onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
       />
 
-      <Button w={"full"} colorScheme="blue" size={"sm"} fontSize={14} onClick={() => navigate("/")}>
+      <Button
+        w={"full"}
+        colorScheme="blue"
+        size={"sm"}
+        fontSize={14}
+        isDisabled={!inputs.email || !inputs.password}
+        onClick={() => navigate("/")}
+      >
         Log in
       </Button>
     </>

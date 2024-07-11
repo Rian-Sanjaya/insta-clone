@@ -11,7 +11,7 @@ const ProfileTabs = () => {
       fontWeight={"bold"}
       mb={4}
     >
-      <Flex borderTop={"1px solid white"} gap={1} alignItems={"center"} cursor={"pointer"}>
+      <Flex borderTop={"1px solid white"} gap={1} p={3} alignItems={"center"} cursor={"pointer"}>
         <Box fontSize={20}><BsGrid3X3 /></Box>
         <Text fontSize={12} display={{ base: "none", sm: "block"}}>Posts</Text>
       </Flex>
