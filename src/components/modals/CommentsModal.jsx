@@ -9,7 +9,7 @@ import {
 	ModalHeader,
 	ModalOverlay,
 } from "@chakra-ui/react";
-import Comment from "../Comment/Comment";
+import Comment from "../comment/Comment";
 import usePostComment from "../../hooks/usePostCoomment";
 import { useEffect, useRef } from "react";
 
