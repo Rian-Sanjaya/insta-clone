@@ -7,13 +7,13 @@ import { getStorage } from "firebase/storage"
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCkh67Q6IEvlEkR-Y7VZhm07sBExjUBL7I",
-  authDomain: "insta-clone-ec933.firebaseapp.com",
-  projectId: "insta-clone-ec933",
-  storageBucket: "insta-clone-ec933.appspot.com",
-  messagingSenderId: "41170906215",
-  appId: "1:41170906215:web:287526a83105cff38138c2",
-  measurementId: "G-M6W8HVPD0X"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+	appId: import.meta.env.VITE_FIREBASE_APP_ID,
+	measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

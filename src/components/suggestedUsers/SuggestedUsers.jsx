@@ -1,31 +1,39 @@
-import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react"
-import SuggestedHeader from "./SuggestedHeader"
-import SuggestedUser from "./SuggestedUser"
+import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
+import SuggestedHeader from "./SuggestedHeader";
+import SuggestedUser from "./SuggestedUser";
+import useGetSuggestedUsers from "../../hooks/useGetSuggestedUser";
 
 const SuggestedUsers = () => {
-  return (
-    <VStack py={8} px={6} gap={4}>
-      <SuggestedHeader />
+	const { isLoading, suggestedUsers } = useGetSuggestedUsers();
 
-      <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"}>
-        <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
-          Suggested for you
-        </Text>
-        <Text fontSize={12} fontWeight={"bold"} cursor={"pointer"} _hover={{ color: "gray.400" }}>
-          See all
-        </Text>
-      </Flex>
+	// optional: render loading skeleton
+	if (isLoading) return null;
 
-      <SuggestedUser name="Dan Abramov" follower={1392} avatar="https://bit.ly/dan-abramov" />
-      <SuggestedUser name="Ryan Florence" follower={567} avatar="https://bit.ly/ryan-florence" />
-      <SuggestedUser name="Christian Nwamba" follower={759} avatar="https://bit.ly/code-beast" />
+	return (
+		<VStack py={8} px={6} gap={4}>
+			<SuggestedHeader />
 
-      <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
-        @ 2024 Build By{" "}
-        <Link href="https://rian-sanjaya.github.io/" target="_blank" color={"blue.500"} fontSize={14}>Lonecode</Link>
-      </Box>
-    </VStack>
-  )
-}
+			{suggestedUsers.length !== 0 && (
+				<Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
+					<Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
+						Suggested for you
+					</Text>
+					<Text fontSize={12} fontWeight={"bold"} _hover={{ color: "gray.400" }} cursor={"pointer"}>
+						See All
+					</Text>
+				</Flex>
+			)}
 
-export default SuggestedUsers
+			{suggestedUsers.map((user) => (
+				<SuggestedUser user={user} key={user.id} />
+			))}
+
+			<Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
+				© 2024 Built By{" "}
+        <Link href="https://rian-sanjaya.github.io/" target="_blank" color={"blue.500"} fontSize={14}>LoneDev</Link>
+			</Box>
+		</VStack>
+	);
+};
+
+export default SuggestedUsers;

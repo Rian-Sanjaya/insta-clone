@@ -3,21 +3,10 @@ import { Box, Flex, Text, VStack } from "@chakra-ui/layout"
 import { useState } from "react"
 import Login from "./Login"
 import Signup from "./Signup"
-// import { useNavigate } from "react-router-dom"
+import GoogleAuth from "./GoogleAuth"
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true)
-  
-  // const navigate = useNavigate()
-
-  // const handleAuth = () => {
-  //   if (!inputs.email || !inputs.password) {
-  //     alert("Please fill all the fields")
-  //     return
-  //   }
-
-  //   navigate("/")
-  // }
 
   return (
     <>
@@ -33,12 +22,7 @@ const AuthForm = () => {
             <Box flex={2} h={"1px"} bg={"gray.400"} />
           </Flex>
 
-          <Flex justifyContent={"center"} alignItems={"center"} cursor={"pointer"}>
-            <Image src="/google.png" w={3} alt="Gooogle logo" />
-            <Text mx={2} color={"blue.500"}>
-              Log in with google
-            </Text>
-          </Flex>
+          <GoogleAuth prefix={isLogin ? "Log in" : "Sign up"} />
         </VStack>
       </Box>
 
