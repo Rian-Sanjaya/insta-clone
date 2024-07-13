@@ -17,7 +17,7 @@ import {
 import { AiFillHeart } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import Comment from "../Comment/Comment";
+import Comment from "../comment/Comment";
 import PostFooter from "../feedPosts/PostFooter";
 import useUserProfileStore from "../../store/userProfileStore";
 import useAuthStore from "../../store/authStore";
